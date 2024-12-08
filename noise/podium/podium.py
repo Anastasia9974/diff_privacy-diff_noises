@@ -1,4 +1,4 @@
-from generate_param import SettingParameters
+from noise.podium.generate_param import SettingParameters
 import random
 import numpy as np
 class Podium:
@@ -16,14 +16,15 @@ class Podium:
         return self.parameters.d * np.exp(self.parameters.epsilon) * self.parameters.w
     def masking_data(self):
         Y = random.random()
+
         p1 = self.first_component_p1()
         p2 = self.second_component_p2()
         t = self.get_t()
         if Y< p1:
             left = (-1*self.parameters.delta*self.parameters.m)/2
-            return random.uniform(left, t)
+            return random.uniform(left, t-0.001)
         elif Y< p2+p1:
-            return random.uniform(t, t + self.parameters.w)
+            return random.uniform(t, t + self.parameters.w-0.001)
         else:
             left = (self.parameters.delta * self.parameters.m)/2
             return random.uniform(t + self.parameters.w, left)

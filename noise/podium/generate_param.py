@@ -25,7 +25,7 @@ class SettingParameters:
         return (self.delta*self.m)/(1+np.exp(self.s))
 
     def get_d(self):
-        return ((1+np.exp(self.s))(1+np.exp(-1*self.s)))/(self.delta*self.m*(1+np.exp(self.s)+np.exp(self.epsilon)+np.exp(self.epsilon-self.s)))
+        return ((1+np.exp(self.s))*(1+np.exp(-1*self.s)))/(self.delta*self.m*(1+np.exp(self.s)+np.exp(self.epsilon)+np.exp(self.epsilon-self.s)))
 
     def get_s(self):
         if self.task_method:

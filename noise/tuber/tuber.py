@@ -1,21 +1,8 @@
 import numpy as np
-from scipy import stats
 
-
-# Algorithms
-from sklearn.cluster import KMeans
-from sklearn.naive_bayes import GaussianNB
-
-
-from sklearn import metrics
-from sklearn.metrics import accuracy_score
-from sklearn.datasets import load_digits
-from sklearn.preprocessing import scale
-
-import matplotlib.pyplot as plt
 import random
 import math
-from generate_param import SettingParameters
+from noise.tuber.generate_param import SettingParameters
 from scipy import stats
 class Tuber:
     def __init__(self, parameters: SettingParameters):

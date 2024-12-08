@@ -1,6 +1,5 @@
 import numpy as np
 from scipy import stats
-import matplotlib.pyplot as plt
 import math
 
 class SettingParameters:
@@ -14,3 +13,7 @@ class SettingParameters:
             return first_parts*2
         else:
             return 0
+    def get_a(self):
+        return self.a
+    def get_y(self):
+        return self.y
