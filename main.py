@@ -100,7 +100,7 @@ if __name__ == '__main__':
     #вывод плотности графиков
     density_ = Density()
     density_.print_density_tuber(data_new=what_get_tuber,data_old=what_change, size=len(what_get_tuber), a=parameters_tuber.get_a(), y=parameters_tuber.get_y())
-    #density_.print_density_gauss(data_new=data_gauss,data_old=what_change, size=len(what_get_tuber), epsilon=1.0,delta=1.0,sensitivity=6.2)
+    density_.print_density_gauss(data_new=data_gauss,data_old=what_change, size=len(what_get_tuber), epsilon=1.0,delta=1.0,sensitivity=6.2)
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
